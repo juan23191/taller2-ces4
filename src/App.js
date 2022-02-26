@@ -15,13 +15,14 @@ function App() {
   const [index, setIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [endGame, setEndGame] = useState(false);
+  
 
   return (
     <div className="App">
       <Router>
         <Routes>
           <Route path="/" element={<Home setUser={setUser} setCategory={setCategory} setDifficulty={setDifficulty} />} />
-          <Route path="/preguntas" element={<Preguntas endGame={endGame} setEndGame={setEndGame} index={index} setIndex={setIndex} score={score} setScore={setScore} user={user} category={category} difficulty={difficulty}/>} />
+          <Route path="/preguntas" element={<Preguntas  endGame={endGame} setEndGame={setEndGame} index={index} setIndex={setIndex} score={score} setScore={setScore} user={user} category={category} difficulty={difficulty}/>} />
           <Route path="/endGame" element={<EndGame/>}></Route>
           <Route path="/win" element={<Win/>}></Route>
         </Routes>

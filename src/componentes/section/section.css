@@ -100,4 +100,56 @@
       flex-basis: 100%;
     }
   }
+.containerLog{
+  width: 65%;
+  display: block;
+  position: relative;
+  left: 15rem;
+  text-align: center;
+  margin-top: 10rem;
+  background-color: #ffff;
+  border-radius: 10px;
+}
+.formLog{
+  width: 50%;
+  display: inline-block;
+  padding: 2rem;
+  height: 25rem;
+  
+}
+.form-groupLog{
+  width: 100%;
+  padding: 12px 20px;
+  display: inline-block;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.Button {
+  width: 100%;
+  background-color: #4CAF50;
+  position: relative;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  top: 2rem;
+}
+
+.Button{
+  background-color: #45a049;
+}
+
   

@@ -1,19 +1,87 @@
-#circulo {
-	width: 5rem;
-	height: 5rem;
-	border-radius: 50%;
-	background: gray;
-	display: flex;
-	justify-content: center;
-    position: relative;
-	align-items: center;
-    top: 50%;
-    left: 50%;
-    margin: -25px 0 0 -25px;
+.CardQuestion{
+  width: 65%;
+  display: block;
+  position: relative;
+  left: 15rem;
+  text-align: center;
+  border-radius: 10px;
 }
-#circulo > p {
-	font-family: sans-serif;
-	color: white;
+
+.containerQuestions{
+    display: block;
+}
+
+.allContentQuestion{
+    position: relative;
+    top: 5rem;
+
+}
+.questions{
+    text-align: center;
+}
+
+.premios{
+	position: relative;
+	background-color: lightgray;
+	width: 40%;
+	height: 4rem;
+	top: 4rem;
+	left: 2rem;
+	border-radius: 12px;
+}
+
+.apartadoQuestions{
+	position: relative;
+	top: 2rem;
+	width: 50%;
+}
+
+.bottonQuestion{
+	padding: 10px;
+	margin-top: 2rem;
+	background-color: black;
+	color: #ffff;
+}
+
+.items{
+	margin-left: 10px;
+	
+}
+
+.numero-question{
+	position: relative;
+	left: 80%;
+}
+
+.premiosIteratico{
+	position: relative;
+	top:1rem;
+}
+
+.contadorReloj{
+  width: 25%;
+  height: 3rem;
+  display: block;
+  position: relative;
+  left: 15rem;
+  text-align: center;
+  background-color: lightgray;
+  border-radius: 10px;
+  bottom: 1rem;
+}
+.numeroContador{
 	font-size: 2rem;
-	font-weight: sans-serif;
+}
+
+.botonContinuar{
+	width: 100%;
+	background-color: #4CAF50;
+	position: relative;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 14px;
+	text-decoration: none;
+	top: 2rem;
 }

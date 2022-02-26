@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import { Container, Form} from "react-bootstrap";
 import Navbar from "../componentes/navbar/Navbar";
 import Pregunta from "../componentes/preguntas/Pregunta";
 import Premios from "../componentes/preguntas/Premios";
+
 
 function Preguntas({user, category, difficulty, index, setIndex, score, setScore, endGame, setEndGame}) {
 
@@ -19,21 +21,24 @@ useEffect(() => {
     };
     searchQuestions();
   }, [data]);
+  
 
   return (
-    <div className="App">
+    <Container className="containerQuestions">
       <Navbar user={user} category={category} difficulty={difficulty} score={score} />
-      <div className="container-fluid mt-4">
-        <div className="row">
-          <div className="col-md-10">
-            {questions.length > 0 ? <Pregunta endGame={endGame} setEndGame={setEndGame} questions={questions} index={index} setIndex={setIndex} score={score} setScore={setScore} /> : codigoRespuesta !== "0" ? <p>Data not Found</p> : <p>Cargando...</p>  } 
+        <div className="allContentQuestion">
+          <div className="numero-question">
+            <span>Pregunta {index + 1} de </span> {questions.length}
           </div>
-          <div className="col-md-2">
+          <div className="titulo-question">
+          {questions.length > 0 ? <Pregunta endGame={endGame} setEndGame={setEndGame} questions={questions} index={index} setIndex={setIndex} score={score} setScore={setScore} /> : codigoRespuesta !== "0" ? <h5>Data not Found</h5>:<h5>Loading....</h5>}
+          </div>
+          <div className="premios">
+            <span>Galeria de puntajes </span>
             <Premios/>
           </div>
         </div>
-      </div>
-    </div>
+    </Container>
   );
 
 }

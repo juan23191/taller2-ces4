@@ -1,25 +1,22 @@
 import { Link } from "react-router-dom";
+import { Container, Navbar, Nav } from "react-bootstrap";
 
-import "../navbar/Navbar";
+import "./Navbar.css";
 
-const Navbar = ({user, category, difficulty, score}) => {
-
+const Navbars = ({user, category, difficulty, score}) => {
   return (
-    <>
-      <div className="navbar">
-        <div className="container">
-          <div className="col-md-12">
-            <div className="row">
-              <div className="col-md-3 text-white text-center"><h1>User: {user.toUpperCase()}</h1></div>
-              <div className="col-md-3 text-white text-center"><h1>Level: {difficulty.toUpperCase()}</h1></div>
-              <div className="col-md-3 text-white text-center"><h1>Money: ${score}</h1></div>
-              <div className="col-md-3 text-white text-center"><Link to={"/"}><h1>SALIR</h1></Link></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
+    <Navbar className="navbar">
+    <Container className="containerNavbar">
+      <Navbar.Collapse >
+          <Nav.Link href="#home" className="itemNavbar">Jugador: {user.toUpperCase()}</Nav.Link>
+          <Nav.Link href="#link" className="itemNavbar">Nivel: {difficulty.toUpperCase()}</Nav.Link>
+          <Nav.Link href="#link" className="itemNavbar">Ganancia: ${score}</Nav.Link>
+          <Nav.Link href="#link" className="itemNavbar"><Link to={"/"}>Volver</Link></Nav.Link>
+          
+      </Navbar.Collapse>
+    </Container>
+  </Navbar>
   );
 };
 
-export default Navbar;
+export default Navbars;

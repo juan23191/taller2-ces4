@@ -5,7 +5,7 @@ const EndGame = () => {
     return (
         <>
         <h1>JUEGO FINALIZADO</h1>
-        <Link to={"/"}><h1>SALIR</h1></Link>
+        <Link to={"/"} ><h1>SALIR</h1></Link>
         </>
   );
 };
